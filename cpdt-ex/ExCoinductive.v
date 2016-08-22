@@ -38,8 +38,11 @@ CoFixpoint true_false :=
 
   Definition true_false := alternate true. *)
 
-(* Infinite proof of equality. This might be a bit too general, or not operational
-     enough in its construction *)
+(* Infinite proof of equality.
+ * An alternative, (this might be a bit too general, or not operational enough)
+ * would have been forall v1 v2 ..., v1 = v2 -> ... so on and would save some effort 
+ * in the final proof. *)
+
 CoInductive inf_tree_eq {A : Type} : inf_tree A -> inf_tree A -> Prop :=
 | Inf_tree_eq :
     forall v left1 left2 right1 right2,
