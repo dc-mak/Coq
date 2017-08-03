@@ -14,7 +14,7 @@ Module Q1.
   Definition not (v1 : truth) : truth :=
     match v1 with
     | Yes => No
-    | No => No
+    | No => Yes
     | Maybe => Maybe
     end.
 
